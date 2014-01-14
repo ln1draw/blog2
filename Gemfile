@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'simplecov', :require => false, :group => :test
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -38,7 +40,14 @@ gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'guard-rspec', require: false
+  gem "factory_girl_rails"
 end
+
+group :development do
+  gem "better_errors"
+end
+gem "binding_of_caller"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

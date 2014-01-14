@@ -1,0 +1,12 @@
+<% if !current_user.nil? %>
+  <%= form_for(@comment) do |f| %>
+    <%= f.label 'Title' %>
+    <%= f.text_field :title %><br>
+    <%= f.date_select :date, :ampm => true, order: [:month, :day, :year] %><br>
+    <%= f.text_area :content %><br>
+    <%= f.hidden_field :user_id, current_user.id %>
+    <%= f.submit %>
+  <% end %>
+<% else %>
+  You need to be a logged-in user to write a comment!
+<% end %>

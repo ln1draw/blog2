@@ -1,0 +1,7 @@
+<h1>Write a new comment</h1>
+<br>
+<% @comment.errors.full_messages.each do |error| %>
+  <%= error %><br>
+<% end %>
+
+<%= render 'form' %>
