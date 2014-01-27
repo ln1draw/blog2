@@ -7,17 +7,21 @@ Blog::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get  'posts'       => 'posts#index',      as: :posts
-  get  'log_out'     => 'sessions#destroy', as: :log_out
-  get  'log_in'      => 'sessions#new',     as: :log_in
-  get  'sign_up'     => 'users#new',        as: :sign_up
-  get  'posts/new'   => 'posts#new',        as: :new_post
-  post 'posts'       => 'posts#create',     as: :create_post
-  get  'post/:id'    => 'posts#show',       as: :post
-  get  'comments'       => 'comments#index',      as: :comments
-  get  'comments/new'   => 'comments#new',        as: :new_comment
-  post 'comments'       => 'comments#create',     as: :create_comment
-  get  'comment/:id'    => 'comments#show',       as: :comment
+  get  'posts'          => 'posts#index',      as: :posts
+  get  'log_out'        => 'sessions#destroy', as: :log_out
+  get  'log_in'         => 'sessions#new',     as: :log_in
+  get  'sign_up'        => 'users#new',        as: :sign_up
+  get  'posts/new'      => 'posts#new',        as: :new_post
+  post 'posts'          => 'posts#create',     as: :create_post
+  get  'post/:id'       => 'posts#show',       as: :post
+  get  'comments'       => 'comments#index',   as: :comments
+  get  'comments/new'   => 'comments#new',     as: :new_comment
+  post 'comments'       => 'comments#create',  as: :create_comment
+  get  'comment/:id'    => 'comments#show',    as: :comment
+  get  'users/:id'      => 'users#show',       as: :user
+  get  'about'          => 'static#about',     as: :about
+  get  'resume'         => 'static#resume',    as: :resume
+  get  'projects'       => 'static#projects',  as: :projects
 
   
   resources :users

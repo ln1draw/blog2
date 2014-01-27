@@ -1,10 +1,12 @@
 class CommentsController < ApplicationController
+  before_action :set_comment, only: [:show]
   def new
     if @current_user
       @comment = Comment.new
     else
       redirect_to sign_up_path, notice: 'You must be logged in to do that!'
     end
+    @post = Post.find(params[:post_id])
   end
   
   def create
@@ -25,6 +27,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:title, :content, :date, :user_id)
+    params.require(:comment).permit(:title, :content, :date, :user_id, :post_id)
   end
 end

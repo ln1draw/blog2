@@ -4,4 +4,9 @@
 <h1><%= @post.title %></h1><br>
 <%= @post.date.strftime("%B %d, %Y") %><br>
 <%= @post.content %><br>
-<%= link_to "Add a comment", new_comment_path %>
+<%= link_to "Add a comment", new_comment_path(post_id: @post.id) %><br>
+<% @comments.each do |comment| %>
+  <br>
+  <%= link_to comment.title, comment_path(comment.id) %><br>
+  <%= link_to User.find(comment.user_id).username, user_path(comment.user_id) %><br>
+<% end %>

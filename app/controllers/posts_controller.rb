@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @sorted = Post.sort
   end
 
   def new
@@ -19,6 +20,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comments = Comment.where(post_id: @post.id)
   end
 
   private
@@ -27,6 +29,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :content, :date, :id)
+    params.require(:post).permit(:title, :content, :date, :id, :user_id)
   end
 end
