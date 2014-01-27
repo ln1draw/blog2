@@ -41,12 +41,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'guard-rspec', require: false
   gem "factory_girl_rails"
-  gem 'sqlite3'
 end
 
-group :production do
-  gem 'postgres'
-end
+gem 'postgres'
 
 group :development do
   gem "better_errors"
