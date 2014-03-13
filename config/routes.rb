@@ -28,6 +28,7 @@ Blog::Application.routes.draw do
   resources :users
   resources :sessions
 
+  get  '/:page',                               to: 'welcome#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

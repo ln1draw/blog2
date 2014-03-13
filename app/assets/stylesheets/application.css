@@ -11,84 +11,104 @@
  *= require_self
  *= require_tree .
  */
-body{
-  text-align: center;
-  font-size: 1em;
-  width: 80%;
-  margin: auto;
-}
-a:visited{
-  color: black;
-  text-decoration: none;
-}
-a{
-  text-decoration: none;
-  color: black;
-}
 
-h1{
-  font-family: 'Gafata', sans-serif;
-}
+/* General Styling */
+  body{
+    text-align: center;
+    font-size: 1em;
+    width: 80%;
+    margin: auto;
+  }
+  a:visited{
+    color: black;
+    text-decoration: none;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
 
-h2{
-  font-family: 'Gafata', sans-serif;
-}
+  h1{
+    font-family: 'Gafata', sans-serif;
+  }
 
-h3{
-  font-family: 'Gafata', sans-serif;
-}
+  h2{
+    font-family: 'Gafata', sans-serif;
+  }
 
-h4{
-  font-family: 'Gafata', sans-serif;
-}
+  h3{
+    font-family: 'Gafata', sans-serif;
+  }
 
-h5{
-  font-family: 'Gafata', sans-serif;
-}
+  h4{
+    font-family: 'Gafata', sans-serif;
+  }
 
-.header-pic{
-  max-width: 100%;
-}
+  h5{
+    font-family: 'Gafata', sans-serif;
+  }
+/* end General Styling*/
 
-#header{
-  display: inline;
-}
+/* Header/layout styling */
 
-#disqus_thread{
-  max-width: 80%;
-  margin: auto;
-}
+  .header-pic{
+    max-width: 100%;
+  }
 
-#header ul{
-  padding-left: 0px;
-}
-#header li{
-  width: 30%;
-  text-align: center;
-  margin: 1%;
-}
-#header h1{
-  width: 100%;
-  text-align: center;
-}
+  #header{
+    display: inline;
+  }
 
-.about{
-  text-align: left;
-  border: 1px solid gray;
-  padding: 15px;
-}
+  #header ul{
+    padding-left: 0px;
+  }
+  #header li{
+    width: 30%;
+    text-align: center;
+    margin: 1%;
+  }
+  #header h1{
+    width: 100%;
+    text-align: center;
+  }
+/* end header/layout styling */
 
-.links{
-  text-align: left;
-}
+/* post#show styling */
+  #disqus_thread{
+    max-width: 80%;
+    margin: auto;
+  }
+/* end post#style styling */
 
-.links a{
-  display: none;
-  cursor: hand;
-  cursor: pointer;
-}
+/* static about page styling */
+  .about{
+    text-align: left;
+    border: 1px solid gray;
+    padding: 15px;
+  }
 
-.links .angle{
-  cursor: hand;
-  cursor: pointer;
-}
+  .links{
+    text-align: left;
+  }
+
+  .links a{
+    display: none;
+    cursor: hand;
+    cursor: pointer;
+  }
+
+  .links .angle{
+    cursor: hand;
+    cursor: pointer;
+  }
+/* end static about page styling */
+
+/* _posts styling (post index displayed on welcome#index) */
+  .post-title{
+    margin: auto;
+  }
+
+  .post-div{
+    margin: 25px;
+  }
+/* end _posts styling */

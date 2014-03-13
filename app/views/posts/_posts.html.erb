@@ -1,0 +1,9 @@
+<h2>Most Recent Posts</h2>
+
+<% Post.feed(params[:page]).each do |post| %>
+  <div class='post-div'>
+    <h3 class='post-title'><%= link_to post.title, post %></h3>
+    <small class='post-date'><%= post.date %></small><br>
+    post excerpt (needs to be coded still)<br>
+  </div>
+<% end %>
