@@ -7,35 +7,36 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <h1><em><a href='/'>ellenesque</a></em></h1>
-        <div id='links'>
-      <a href='https://github.com/shanghaiellen'><i class="github sign icon large"></i></a>
-      <a href='mailto:shanghaiellen@gmail.com'><i class='black mail outline icon large'></i></a>
-      <a href='https://twitter.com/ln1draw'><i class="twitter sign icon large"></i></a>
-    </div><br>
-    <div id="user_nav">
-      <div class='ui buttons'>
-        <% if current_user %>
-          Logged in as <%= current_user.username %>.
-          <% if current_user.admin %>
-            <%= current_user.username %> is an administrator.<br><br>
-            <div class='ui button'><%= link_to "New post", new_post_path %></div>
-            <div class='or'></div>
-          <% end %>  
-          <div class='ui button'><%= link_to "Blog", posts_path %></div>
-          <div class='or'></div> 
-          <div class='ui button'><%= link_to "About", about_path %></div>
-          <div class='or'></div>
-          <div class='ui button'><%= link_to "Log out", log_out_path %></div>
-        <% else %>
-          <div class='ui button'><%= link_to "About", about_path %></div>
-          <div class='or'></div>
-          <div class='ui button'><%= link_to "Sign up", sign_up_path %></div>
-          <div class='or'></div>
-          <div class='ui button'><%= link_to "log in", log_in_path %></div>
+    <div id='header' class='ui menu grid'>
+
+    <!-- This is the computer-style menu -->
+    <div class='row'>
+      <ul class="ui purple inverted menu">
+        <%= link_to 'https://github.com/shanghaiellen' do %>
+          <li class='item'>
+            <i class='github sign icon large'></i>
+          </li>
         <% end %>
-      </div>
+
+        <%= link_to 'mailto:shanghaiellen@gmail.com' do %>
+          <li class='item'>
+            <i class='mail outline icon large'></i>
+          </li>
+        <% end %>
+
+        <%= link_to 'https://twitter.com/ln1draw' do %>
+          <li class='item'>
+            <i class='twitter sign icon large'></i>
+          </li>
+        <% end %>
+
+        <%= link_to '/' do %>
+          <h1 class='right menu item'><em>ellen wondra-lindley</em></h1>
+        <% end %>
+      </ul>
     </div>
+  </div>
+     
     <br>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}" %>

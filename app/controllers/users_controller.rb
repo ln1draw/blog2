@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     @comments = Comment.where(user_id: @user.id)
   end
 
+  def admin
+    unless @current_user && @current_user.admin
+      redirect_to root_url, :notice => "You don't have permission to do that!"
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:email, :username, :password, :password_confirmation, :user_id)

@@ -13,6 +13,7 @@
  */
 body{
   text-align: center;
+  font-size: 1em;
 }
 a:visited{
   color: black;
@@ -20,4 +21,28 @@ a:visited{
 }
 a{
   text-decoration: none;
+  color: black;
+}
+#header{
+  display: inline;
+}
+
+#disqus_thread{
+  max-width: 80%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 750px){
+  #header ul{
+    padding-left: 0px;
+  }
+  #header li{
+    width: 30%;
+    text-align: center;
+    margin: 1%;
+  }
+  #header h1{
+    width: 100%;
+    text-align: center;
+  }
 }

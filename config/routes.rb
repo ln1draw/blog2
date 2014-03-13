@@ -22,6 +22,7 @@ Blog::Application.routes.draw do
   get  'about'          => 'static#about',     as: :about
   get  'resume'         => 'static#resume',    as: :resume
   get  'projects'       => 'static#projects',  as: :projects
+  get  'admin'          => 'users#admin',      as: :admin
 
   
   resources :users
