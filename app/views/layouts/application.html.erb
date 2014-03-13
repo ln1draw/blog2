@@ -3,39 +3,42 @@
   <head>
     <title>Blog</title>
     <%= stylesheet_link_tag "application" %>
+    <link href='http://fonts.googleapis.com/css?family=Gafata' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <div id='header' class='ui menu grid'>
+      <%= link_to(image_tag('oberhaus.jpg', alt: "logo", title: "Welcome", class: 'header-pic'),"/") %>
 
     <!-- This is the computer-style menu -->
-    <div class='row'>
-      <ul class="ui purple inverted menu">
-        <%= link_to 'https://github.com/shanghaiellen' do %>
-          <li class='item'>
-            <i class='github sign icon large'></i>
-          </li>
-        <% end %>
+      <div class='row'>
+        <ul class="ui fluid three item menu">
+          <%= link_to 'https://github.com/shanghaiellen' do %>
+            <li class='center item'>
+              <i class='github sign icon large'></i>
+            </li>
+          <% end %>
 
-        <%= link_to 'mailto:shanghaiellen@gmail.com' do %>
-          <li class='item'>
-            <i class='mail outline icon large'></i>
-          </li>
-        <% end %>
+          <%= link_to 'mailto:shanghaiellen@gmail.com' do %>
+            <li class='center item'>
+              <i class='mail outline icon large'></i>
+            </li>
+          <% end %>
 
-        <%= link_to 'https://twitter.com/ln1draw' do %>
-          <li class='item'>
-            <i class='twitter sign icon large'></i>
-          </li>
-        <% end %>
-
-        <%= link_to '/' do %>
-          <h1 class='right menu item'><em>ellen wondra-lindley</em></h1>
-        <% end %>
-      </ul>
+          <%= link_to 'https://twitter.com/ln1draw' do %>
+            <li class='center item'>
+              <i class='twitter sign icon large'></i>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-  </div>
+    <div class='namebox'>
+      <%= link_to '/' do %>
+        <h1 class='name'>Ellen Wondra-Lindley</h1>
+      <% end %>
+    </div>
      
     <br>
     <% flash.each do |name, msg| %>

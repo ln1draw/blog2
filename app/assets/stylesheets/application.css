@@ -23,6 +23,31 @@ a{
   text-decoration: none;
   color: black;
 }
+
+h1{
+  font-family: 'Gafata', sans-serif;
+}
+
+h2{
+  font-family: 'Gafata', sans-serif;
+}
+
+h3{
+  font-family: 'Gafata', sans-serif;
+}
+
+h4{
+  font-family: 'Gafata', sans-serif;
+}
+
+h5{
+  font-family: 'Gafata', sans-serif;
+}
+
+.header-pic{
+  max-width: 100%;
+}
+
 #header{
   display: inline;
 }
@@ -32,17 +57,15 @@ a{
   margin: auto;
 }
 
-@media only screen and (max-width: 750px){
-  #header ul{
-    padding-left: 0px;
-  }
-  #header li{
-    width: 30%;
-    text-align: center;
-    margin: 1%;
-  }
-  #header h1{
-    width: 100%;
-    text-align: center;
-  }
+#header ul{
+  padding-left: 0px;
+}
+#header li{
+  width: 30%;
+  text-align: center;
+  margin: 1%;
+}
+#header h1{
+  width: 100%;
+  text-align: center;
 }
