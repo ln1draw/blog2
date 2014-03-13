@@ -1,16 +1,36 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
+$(document).ready(function (){
+  var descriptions = ['#scamazon-box', '#scamalytics-box', '#feedhunter-box', '#llama-lister-box', '#pea-patch-box','#sloth-expresser-box'
+  ];
 
-//= require_tree .
+  var DisplayDescription = function(new_description){
+    $(descriptions).each(function(index, description){
+      $(description).hide();
+    });
+    $(new_description).show();
+  };
+
+  $('#scamazon').click(function(){
+    DisplayDescription('#scamazon-box');
+  });
+
+  $('#scamalytics').click(function(){
+    DisplayDescription('#scamalytics-box');
+  });
+
+  $('#feedhunter').click(function(){
+    DisplayDescription('#feedhunter-box');
+  });
+
+  $('#llama-lister').click(function(){
+    DisplayDescription('#llama-lister-box');
+  });
+
+  $('#pea-patch').click(function(){
+    DisplayDescription('#pea-patch-box');
+  });
+
+  $('#sloth-expresser').click(function(){
+    DisplayDescription('#sloth-expresser-box');
+  });
+
+})

@@ -71,3 +71,24 @@ h5{
   width: 100%;
   text-align: center;
 }
+
+.about{
+  text-align: left;
+  border: 1px solid gray;
+  padding: 15px;
+}
+
+.links{
+  text-align: left;
+}
+
+.links a{
+  display: none;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.links .angle{
+  cursor: hand;
+  cursor: pointer;
+}
