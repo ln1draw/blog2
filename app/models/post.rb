@@ -13,7 +13,7 @@ class Post < ActiveRecord::Base
     end
 
     x = 10 * (start_point - 1)
-    y = x + 10
+    y = x + 9
 
     return Post.all.reverse[x..y]
   end

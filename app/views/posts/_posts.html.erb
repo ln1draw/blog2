@@ -7,3 +7,25 @@
     post excerpt (needs to be coded still)<br>
   </div>
 <% end %>
+
+<div class="ui borderless pagination menu">
+  <% unless params[:page].to_i == 1 || params[:page].nil? %>
+    <a class="item" href='/<%= params[:page].to_i - 1 %>'>
+      <i class="left arrow icon"></i> Previous
+    </a>
+  <% end %>
+
+  <% pages = Post.all.length / 10 %>
+  <% if Post.all.length % 10 > 0 %>
+    <% pages += 1 %>
+  <% end %>
+  <% pages.times do |i| %>
+    <a class="item" href='/<%= i+1 %>'><%= i+1 %></a>
+  <% end %>
+
+  <% unless params[:page].to_i == pages %>
+    <a class="item" href='/<%= params[:page].to_i + 1 %>'>
+      Next <i class="icon right arrow"></i>
+    </a>
+  <% end %>
+</div>

@@ -8,15 +8,13 @@ $(document).ready(function (){
     });
     $(new_description).show();
     $(active_tab).addClass('active');
-    $(new_description).addClass('active_description')
+    $(new_description).addClass('active_description');
+    $('.active').click(function(){
+      $('.active').removeClass('active');
+      $('.active_description').hide();
+      $('.active_description').removeClass('active_description');
+    });
   };
-
-  // doesn't work yet
-  $('.active').click(function(){
-    $('.active').removeClass('active');
-    $('.active_description').hide();
-    $('.active_description').removeClass('active_description');
-  })
 
   $('#scamazon').click(function(){
     DisplayDescription('#scamazon-box', '#scamazon');
