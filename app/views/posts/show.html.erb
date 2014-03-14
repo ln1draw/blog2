@@ -2,8 +2,11 @@
   <%= error %><br>
 <% end %>
 <h1><%= @post.title %></h1><br>
+
 <%= @post.date.strftime("%B %d, %Y") %><br>
-<%= @post.content %><br>
+<div class='post-content'>
+  <%= @post.content %><br>
+</div>
 
  <div id="disqus_thread"></div>
           <script type="text/javascript">

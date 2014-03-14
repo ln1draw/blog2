@@ -121,3 +121,10 @@
     margin: 25px;
   }
 /* end _posts styling */
+  
+/* post styling */
+  .post-content{
+    width: 80%;
+    text-align: left;
+    margin: 10px;
+  }

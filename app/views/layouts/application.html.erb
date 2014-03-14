@@ -50,5 +50,16 @@
 
     <%= yield %>
 
+    <div class='footer'>
+      <div class="ui horizontal icon divider">
+        <i class="circular umbrella icon"></i>
+      </div>
+      <%= link_to '/about' do %>
+          <h2 class='name'>About</h2>
+        <% end %>
+      <div class="ui horizontal icon divider">
+        <i class="circular umbrella icon"></i>
+      </div>
+    </div>
   </body>
 </html>
