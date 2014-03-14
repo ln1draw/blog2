@@ -4,6 +4,7 @@
 <h1><%= @post.title %></h1><br>
 
 <%= @post.date.strftime("%B %d, %Y") %><br>
+<small><%= @post.excerpt %></small><br>
 <div class='post-content'>
   <%= @post.content %><br>
 </div>
