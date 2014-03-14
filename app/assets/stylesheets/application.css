@@ -92,7 +92,6 @@
   }
 
   .links a{
-    display: none;
     cursor: hand;
     cursor: pointer;
   }
@@ -100,6 +99,16 @@
   .links .angle{
     cursor: hand;
     cursor: pointer;
+  }
+
+  .accordion-content{
+    max-width: 95%;
+    margin: auto;
+  }
+
+  #about-accordion{
+    width: 80%;
+    margin: auto;
   }
 /* end static about page styling */
 
