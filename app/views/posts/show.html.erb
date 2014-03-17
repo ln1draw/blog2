@@ -3,8 +3,8 @@
 <% end %>
 <h1><%= @post.title %></h1><br>
 
-<%= @post.date.strftime("%B %d, %Y") %><br>
-<small><%= @post.excerpt %></small><br>
+<%= @post.date.strftime("%B %d, %Y") %><br><br>
+<small><%= @post.excerpt %></small><br><br>
 <div class='post-content'>
   <%= raw @post.content %><br>
 </div>
