@@ -2,6 +2,7 @@
   <%= f.label 'Title' %>
   <%= f.text_field :title %><br>
   <%= f.date_select :date, :ampm => true, order: [:month, :day, :year] %><br>
+  <%= f.text_area :excerpt %><br>
   <%= f.text_area :content %><br>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.submit %>
